@@ -35,9 +35,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Aku Bisa" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XZa-cd-ReZ">
-                                <rect key="frame" x="31" y="83" width="176" height="36"/>
+                                <rect key="frame" x="31" y="83" width="240" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="36"/>
+                                <fontDescription key="fontDescription" name="SFProDisplay-Black" family="SF Pro Display" pointSize="36"/>
                                 <color key="textColor" red="0.90980392156862744" green="0.36470588235294116" blue="0.015686274509803921" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -49,6 +49,11 @@
                                 <state key="normal" title="Kirim Lokasi Saya">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="30"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="kirimLokasiBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jhA-3I-GPK"/>
                                 </connections>
@@ -157,20 +162,20 @@
             <objects>
                 <viewController id="zPZ-RW-tof" customClass="InfoSayaVC" customModule="AkuBisa" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="EQu-je-lSm">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="1050"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="1020"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zkm-60-Ce0">
-                                <rect key="frame" x="0.0" y="44" width="390" height="1006"/>
+                                <rect key="frame" x="0.0" y="44" width="390" height="976"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ljc-XS-V4f">
-                                        <rect key="frame" x="0.0" y="0.0" width="390" height="1050"/>
+                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ljc-XS-V4f">
+                                        <rect key="frame" x="0.0" y="0.0" width="390" height="976"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="8Al-vp-hel">
-                                                <rect key="frame" x="0.0" y="0.0" width="390" height="1050"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="390" height="990"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XPA-7S-u9o">
-                                                        <rect key="frame" x="0.0" y="0.0" width="390" height="1050"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="390" height="990"/>
                                                         <subviews>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="NC 1 home-6" translatesAutoresizingMaskIntoConstraints="NO" id="tZD-Wt-uPC">
                                                                 <rect key="frame" x="0.0" y="-31" width="390" height="844"/>
@@ -442,6 +447,9 @@
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                     </view>
                                                 </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="990" id="Dwi-wr-YUb"/>
+                                                </constraints>
                                             </stackView>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -475,11 +483,11 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Info Saya" image="person" catalog="system" id="kcJ-Qe-Rtq" customClass="info"/>
-                    <size key="freeformSize" width="390" height="1050"/>
+                    <size key="freeformSize" width="390" height="1020"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5C3-Kv-DK5" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="895" y="874"/>
+            <point key="canvasLocation" x="896.92307692307691" y="861.61137440758284"/>
         </scene>
         <!--Info Saya-->
         <scene sceneID="QZq-5k-J0d">
