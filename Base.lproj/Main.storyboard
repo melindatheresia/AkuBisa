@@ -502,21 +502,34 @@
                     <size key="freeformSize" width="390" height="1020"/>
                     <connections>
                         <outlet property="alamatAnak" destination="hFS-jg-Jle" id="1ks-tO-fj5"/>
+                        <outlet property="alamatAnakLabel" destination="hFS-jg-Jle" id="dXN-uC-6wc"/>
                         <outlet property="catatanDariOrtu" destination="l5o-Tl-5Og" id="wfO-Ow-s16"/>
+                        <outlet property="catatanOrtuLabel" destination="l5o-Tl-5Og" id="TA6-02-Gla"/>
                         <outlet property="dariStasiun" destination="ARe-Hy-erg" id="b3Q-jC-e8o"/>
+                        <outlet property="dariStasiunLabel" destination="ARe-Hy-erg" id="yaY-rr-LOV"/>
                         <outlet property="jalurKereta" destination="klf-zb-9nR" id="PGS-DK-vfK"/>
+                        <outlet property="jalurKeretaLabel" destination="klf-zb-9nR" id="TEs-xY-AzT"/>
                         <outlet property="jamBerangkat" destination="av3-To-Rmz" id="erB-Ek-NIG"/>
+                        <outlet property="jamBerangkatLabel" destination="av3-To-Rmz" id="XP6-6E-jcw"/>
                         <outlet property="jamTiba" destination="A1I-Tf-B8U" id="jF7-LA-7iV"/>
+                        <outlet property="jamTibaLabel" destination="A1I-Tf-B8U" id="c5N-6l-bsW"/>
                         <outlet property="keStasiun" destination="kaX-il-yi3" id="0wY-O3-9BR"/>
+                        <outlet property="keStasiunLabel" destination="kaX-il-yi3" id="Ugb-8L-9Me"/>
                         <outlet property="kodeBooking" destination="taU-2k-tMx" id="1sl-ea-kYY"/>
+                        <outlet property="kodeBookingLabel" destination="taU-2k-tMx" id="9Gg-EM-cxG"/>
+                        <outlet property="kontakLabel" destination="nSm-Cu-Gqa" id="OHw-4d-PWh"/>
                         <outlet property="kontakSection" destination="nSm-Cu-Gqa" id="0P2-T9-S6b"/>
                         <outlet property="listKontak" destination="E1x-69-aez" id="Goe-Ok-mA4"/>
                         <outlet property="namaAnak" destination="qUK-1C-Eov" id="ZyQ-7C-Mzg"/>
+                        <outlet property="namaAnakLabel" destination="qUK-1C-Eov" id="AzG-Va-n24"/>
                         <outlet property="namaKereta" destination="zgG-k3-JqZ" id="kEc-J5-kbg"/>
+                        <outlet property="namaKeretaLabel" destination="zgG-k3-JqZ" id="3Oj-q8-BnV"/>
                         <outlet property="photoProfile" destination="tm1-GW-iCF" id="iRG-2Z-ZEd"/>
                         <outlet property="tempatDuduk" destination="Fio-Rq-tUO" id="Mye-tk-bDH"/>
+                        <outlet property="tempatDudukLabel" destination="Fio-Rq-tUO" id="2Yz-pG-osM"/>
                         <outlet property="ubahInfo" destination="pJ6-cN-f05" id="O5D-Wa-wAv"/>
                         <outlet property="umurAnak" destination="eYB-MN-kzM" id="irJ-Bd-Gmp"/>
+                        <outlet property="umurAnakLabel" destination="eYB-MN-kzM" id="0Np-Ma-gRV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5C3-Kv-DK5" sceneMemberID="firstResponder"/>
