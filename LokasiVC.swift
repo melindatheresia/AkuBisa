@@ -49,7 +49,7 @@ class LokasiVC: UIViewController {
 //      https://wa.me/08231231412?text=Halo%20name%20maya%20nadine
         
 //      https://stackoverflow.com/questions/39809620/how-to-open-whatsapp-from-swift-app ini buat open whatsapp
-        let appURL = URL(string: "https://wa.me/\(phoneNumber)?text=Hi%20now%20I'm%20here\(locationUrl)!")!
+        let appURL = URL(string: "https://wa.me/\(phoneNumber)?text=Hi,%20now%20I'm%20here%20\(locationUrl)!")!
         if UIApplication.shared.canOpenURL(appURL) {
             if #available(iOS 10.0, *) {
                 UIApplication.shared.open(appURL, options: [:], completionHandler: nil)
@@ -63,4 +63,3 @@ class LokasiVC: UIViewController {
     }
     
 }
-

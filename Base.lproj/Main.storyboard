@@ -31,7 +31,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="NC 1 home-4" translatesAutoresizingMaskIntoConstraints="NO" id="pO3-lU-4xW">
-                                <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                                <rect key="frame" x="0.0" y="19" width="390" height="844"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Aku Bisa" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XZa-cd-ReZ">
@@ -42,7 +42,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d44-fX-hfT">
-                                <rect key="frame" x="78" y="655" width="235" height="60"/>
+                                <rect key="frame" x="78" y="662" width="235" height="60"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.90980392156862744" green="0.36470588235294116" blue="0.015686274509803921" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="SFProDisplay-Medium" family="SF Pro Display" pointSize="21"/>
@@ -60,7 +60,7 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="1" green="0.97647058823529409" blue="0.93333333333333335" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="tintColor" red="0.90980392156862744" green="0.36470588235294116" blue="0.015686274509803921" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Lokasi" image="location" catalog="system" id="sKX-88-w0E">
@@ -114,6 +114,9 @@
                                 <rect key="frame" x="84" y="167" width="222" height="217"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="NC 1 polisi dokter-3"/>
+                                <connections>
+                                    <action selector="telpPolisiBtn:" destination="FcD-H0-W05" eventType="touchUpInside" id="a1t-87-JOD"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ambulans" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0x7-Xu-dnD">
                                 <rect key="frame" x="107" y="410" width="176" height="36"/>
@@ -126,12 +129,19 @@
                                 <rect key="frame" x="84" y="446" width="222" height="217"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="NC 1 polisi dokter-4"/>
+                                <connections>
+                                    <action selector="telpAmbulansBtn:" destination="FcD-H0-W05" eventType="touchUpInside" id="pZU-eG-lE7"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="yh7-Hl-Ztq"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="SOS" image="phone" catalog="system" id="659-6e-k0D"/>
+                    <connections>
+                        <outlet property="ambulansButton" destination="fJB-rp-WKN" id="hL3-tb-6XL"/>
+                        <outlet property="polisiButton" destination="UUq-ru-IxI" id="Ab6-z2-xQF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NW2-qL-ezo" sceneMemberID="firstResponder"/>
             </objects>
@@ -146,6 +156,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" red="0.90980392156862744" green="0.36470588235294116" blue="0.015686274509803921" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="m1c-IG-kRa"/>
@@ -443,6 +454,11 @@
                                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
+                                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="E1x-69-aez">
+                                                                <rect key="frame" x="20" y="712" width="240" height="321"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                            </tableView>
                                                         </subviews>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                     </view>
@@ -484,6 +500,24 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Info Saya" image="person" catalog="system" id="kcJ-Qe-Rtq" customClass="info"/>
                     <size key="freeformSize" width="390" height="1020"/>
+                    <connections>
+                        <outlet property="alamatAnak" destination="hFS-jg-Jle" id="1ks-tO-fj5"/>
+                        <outlet property="catatanDariOrtu" destination="l5o-Tl-5Og" id="wfO-Ow-s16"/>
+                        <outlet property="dariStasiun" destination="ARe-Hy-erg" id="b3Q-jC-e8o"/>
+                        <outlet property="jalurKereta" destination="klf-zb-9nR" id="PGS-DK-vfK"/>
+                        <outlet property="jamBerangkat" destination="av3-To-Rmz" id="erB-Ek-NIG"/>
+                        <outlet property="jamTiba" destination="A1I-Tf-B8U" id="jF7-LA-7iV"/>
+                        <outlet property="keStasiun" destination="kaX-il-yi3" id="0wY-O3-9BR"/>
+                        <outlet property="kodeBooking" destination="taU-2k-tMx" id="1sl-ea-kYY"/>
+                        <outlet property="kontakSection" destination="nSm-Cu-Gqa" id="0P2-T9-S6b"/>
+                        <outlet property="listKontak" destination="E1x-69-aez" id="Goe-Ok-mA4"/>
+                        <outlet property="namaAnak" destination="qUK-1C-Eov" id="ZyQ-7C-Mzg"/>
+                        <outlet property="namaKereta" destination="zgG-k3-JqZ" id="kEc-J5-kbg"/>
+                        <outlet property="photoProfile" destination="tm1-GW-iCF" id="iRG-2Z-ZEd"/>
+                        <outlet property="tempatDuduk" destination="Fio-Rq-tUO" id="Mye-tk-bDH"/>
+                        <outlet property="ubahInfo" destination="pJ6-cN-f05" id="O5D-Wa-wAv"/>
+                        <outlet property="umurAnak" destination="eYB-MN-kzM" id="irJ-Bd-Gmp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5C3-Kv-DK5" sceneMemberID="firstResponder"/>
             </objects>
