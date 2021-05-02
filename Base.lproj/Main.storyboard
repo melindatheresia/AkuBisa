@@ -197,7 +197,7 @@
                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             </imageView>
                                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kZy-kU-hlW">
-                                                                <rect key="frame" x="273" y="712" width="47" height="35"/>
+                                                                <rect key="frame" x="273" y="719" width="47" height="35"/>
                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                 <color key="backgroundColor" systemColor="systemYellowColor"/>
                                                                 <state key="normal" image="message.fill" catalog="system">
@@ -205,7 +205,7 @@
                                                                 </state>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yvk-u0-czI">
-                                                                <rect key="frame" x="324" y="712" width="47" height="35"/>
+                                                                <rect key="frame" x="324" y="719" width="47" height="35"/>
                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                 <color key="backgroundColor" systemColor="systemYellowColor"/>
                                                                 <state key="normal" image="phone.fill" catalog="system">
@@ -227,6 +227,11 @@
                                                                 <state key="normal" title="Ubah">
                                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 </state>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                        <integer key="value" value="20"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
                                                                 <connections>
                                                                     <segue destination="BXq-Ja-Ycg" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="coverVertical" id="gg6-s7-ca1"/>
                                                                 </connections>
@@ -288,7 +293,7 @@
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Semarang Tawang" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ARe-Hy-erg">
-                                                                <rect key="frame" x="32" y="395" width="143" height="54"/>
+                                                                <rect key="frame" x="32" y="399" width="143" height="54"/>
                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                 <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="22"/>
                                                                 <color key="textColor" red="0.90980392160000001" green="0.36470588240000001" blue="0.015686274510000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -302,7 +307,7 @@
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Gambir" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kaX-il-yi3">
-                                                                <rect key="frame" x="216" y="395" width="143" height="54"/>
+                                                                <rect key="frame" x="216" y="399" width="143" height="54"/>
                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                 <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="22"/>
                                                                 <color key="textColor" red="0.90980392160000001" green="0.36470588240000001" blue="0.015686274510000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -316,7 +321,7 @@
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="klf-zb-9nR">
-                                                                <rect key="frame" x="32" y="483" width="143" height="26"/>
+                                                                <rect key="frame" x="32" y="487" width="143" height="26"/>
                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                 <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="22"/>
                                                                 <color key="textColor" red="0.90980392160000001" green="0.36470588240000001" blue="0.015686274510000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -330,7 +335,7 @@
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="3, 15D" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fio-Rq-tUO">
-                                                                <rect key="frame" x="216" y="483" width="143" height="26"/>
+                                                                <rect key="frame" x="216" y="487" width="143" height="26"/>
                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                 <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="22"/>
                                                                 <color key="textColor" red="0.90980392160000001" green="0.36470588240000001" blue="0.015686274510000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -344,7 +349,7 @@
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="12:28" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="av3-To-Rmz">
-                                                                <rect key="frame" x="32" y="545" width="143" height="26"/>
+                                                                <rect key="frame" x="32" y="549" width="143" height="26"/>
                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                 <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="22"/>
                                                                 <color key="textColor" red="0.90980392160000001" green="0.36470588240000001" blue="0.015686274510000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -358,7 +363,7 @@
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="17:44" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A1I-Tf-B8U">
-                                                                <rect key="frame" x="215" y="545" width="143" height="26"/>
+                                                                <rect key="frame" x="215" y="549" width="143" height="26"/>
                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                 <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="22"/>
                                                                 <color key="textColor" red="0.90980392160000001" green="0.36470588240000001" blue="0.015686274510000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -374,9 +379,15 @@
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Catatan:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l5o-Tl-5Og">
                                                                 <rect key="frame" x="32" y="612" width="333" height="27"/>
                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                <color key="backgroundColor" red="1" green="0.97647058819999999" blue="0.93333333330000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="15"/>
                                                                 <color key="textColor" red="0.90980392160000001" green="0.36470588240000001" blue="0.015686274510000001" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                        <integer key="value" value="20"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Kontak" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nSm-Cu-Gqa">
                                                                 <rect key="frame" x="20" y="673" width="292" height="27"/>
@@ -386,7 +397,7 @@
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="35D-Ko-ZCA">
-                                                                <rect key="frame" x="273" y="752" width="47" height="35"/>
+                                                                <rect key="frame" x="274" y="762" width="47" height="35"/>
                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                 <color key="backgroundColor" systemColor="systemYellowColor"/>
                                                                 <state key="normal" image="message.fill" catalog="system">
@@ -394,7 +405,7 @@
                                                                 </state>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Fg-ej-L6H">
-                                                                <rect key="frame" x="324" y="752" width="47" height="35"/>
+                                                                <rect key="frame" x="325" y="762" width="47" height="35"/>
                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                 <color key="backgroundColor" systemColor="systemYellowColor"/>
                                                                 <state key="normal" image="phone.fill" catalog="system">
@@ -409,7 +420,7 @@
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a5H-ie-f1M">
-                                                                <rect key="frame" x="273" y="792" width="47" height="35"/>
+                                                                <rect key="frame" x="274" y="805" width="47" height="35"/>
                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                 <color key="backgroundColor" systemColor="systemYellowColor"/>
                                                                 <state key="normal" image="message.fill" catalog="system">
@@ -417,7 +428,7 @@
                                                                 </state>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RRN-um-Ltw">
-                                                                <rect key="frame" x="324" y="792" width="47" height="35"/>
+                                                                <rect key="frame" x="325" y="805" width="47" height="35"/>
                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                 <color key="backgroundColor" systemColor="systemYellowColor"/>
                                                                 <state key="normal" image="phone.fill" catalog="system">
@@ -431,22 +442,6 @@
                                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wcl-QM-vck">
-                                                                <rect key="frame" x="273" y="833" width="47" height="35"/>
-                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                                <color key="backgroundColor" systemColor="systemYellowColor"/>
-                                                                <state key="normal" image="message.fill" catalog="system">
-                                                                    <color key="titleColor" red="0.90715408330000002" green="0.36819028850000002" blue="0.01534415875" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                                </state>
-                                                            </button>
-                                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BBY-Rk-MgT">
-                                                                <rect key="frame" x="324" y="833" width="47" height="35"/>
-                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                                <color key="backgroundColor" systemColor="systemYellowColor"/>
-                                                                <state key="normal" image="phone.fill" catalog="system">
-                                                                    <color key="titleColor" red="0.90715408330000002" green="0.36819028850000002" blue="0.01534415875" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                                </state>
-                                                            </button>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Aunt (Jemput)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nvE-Tv-fNF">
                                                                 <rect key="frame" x="21" y="833" width="245" height="35"/>
                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -459,6 +454,22 @@
                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                             </tableView>
+                                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wcl-QM-vck">
+                                                                <rect key="frame" x="274" y="848" width="47" height="35"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                                                <state key="normal" image="message.fill" catalog="system">
+                                                                    <color key="titleColor" red="0.90715408330000002" green="0.36819028850000002" blue="0.01534415875" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                </state>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BBY-Rk-MgT">
+                                                                <rect key="frame" x="325" y="848" width="47" height="35"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                                                <state key="normal" image="phone.fill" catalog="system">
+                                                                    <color key="titleColor" red="0.90715408330000002" green="0.36819028850000002" blue="0.01534415875" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                </state>
+                                                            </button>
                                                         </subviews>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                     </view>
@@ -501,34 +512,20 @@
                     <tabBarItem key="tabBarItem" title="Info Saya" image="person" catalog="system" id="kcJ-Qe-Rtq" customClass="info"/>
                     <size key="freeformSize" width="390" height="1020"/>
                     <connections>
-                        <outlet property="alamatAnak" destination="hFS-jg-Jle" id="1ks-tO-fj5"/>
                         <outlet property="alamatAnakLabel" destination="hFS-jg-Jle" id="dXN-uC-6wc"/>
-                        <outlet property="catatanDariOrtu" destination="l5o-Tl-5Og" id="wfO-Ow-s16"/>
                         <outlet property="catatanOrtuLabel" destination="l5o-Tl-5Og" id="TA6-02-Gla"/>
-                        <outlet property="dariStasiun" destination="ARe-Hy-erg" id="b3Q-jC-e8o"/>
                         <outlet property="dariStasiunLabel" destination="ARe-Hy-erg" id="yaY-rr-LOV"/>
-                        <outlet property="jalurKereta" destination="klf-zb-9nR" id="PGS-DK-vfK"/>
                         <outlet property="jalurKeretaLabel" destination="klf-zb-9nR" id="TEs-xY-AzT"/>
-                        <outlet property="jamBerangkat" destination="av3-To-Rmz" id="erB-Ek-NIG"/>
                         <outlet property="jamBerangkatLabel" destination="av3-To-Rmz" id="XP6-6E-jcw"/>
-                        <outlet property="jamTiba" destination="A1I-Tf-B8U" id="jF7-LA-7iV"/>
                         <outlet property="jamTibaLabel" destination="A1I-Tf-B8U" id="c5N-6l-bsW"/>
-                        <outlet property="keStasiun" destination="kaX-il-yi3" id="0wY-O3-9BR"/>
                         <outlet property="keStasiunLabel" destination="kaX-il-yi3" id="Ugb-8L-9Me"/>
-                        <outlet property="kodeBooking" destination="taU-2k-tMx" id="1sl-ea-kYY"/>
                         <outlet property="kodeBookingLabel" destination="taU-2k-tMx" id="9Gg-EM-cxG"/>
                         <outlet property="kontakLabel" destination="nSm-Cu-Gqa" id="OHw-4d-PWh"/>
-                        <outlet property="kontakSection" destination="nSm-Cu-Gqa" id="0P2-T9-S6b"/>
                         <outlet property="listKontak" destination="E1x-69-aez" id="Goe-Ok-mA4"/>
-                        <outlet property="namaAnak" destination="qUK-1C-Eov" id="ZyQ-7C-Mzg"/>
                         <outlet property="namaAnakLabel" destination="qUK-1C-Eov" id="AzG-Va-n24"/>
-                        <outlet property="namaKereta" destination="zgG-k3-JqZ" id="kEc-J5-kbg"/>
                         <outlet property="namaKeretaLabel" destination="zgG-k3-JqZ" id="3Oj-q8-BnV"/>
-                        <outlet property="photoProfile" destination="tm1-GW-iCF" id="iRG-2Z-ZEd"/>
-                        <outlet property="tempatDuduk" destination="Fio-Rq-tUO" id="Mye-tk-bDH"/>
                         <outlet property="tempatDudukLabel" destination="Fio-Rq-tUO" id="2Yz-pG-osM"/>
                         <outlet property="ubahInfo" destination="pJ6-cN-f05" id="O5D-Wa-wAv"/>
-                        <outlet property="umurAnak" destination="eYB-MN-kzM" id="irJ-Bd-Gmp"/>
                         <outlet property="umurAnakLabel" destination="eYB-MN-kzM" id="0Np-Ma-gRV"/>
                     </connections>
                 </viewController>
@@ -536,10 +533,10 @@
             </objects>
             <point key="canvasLocation" x="896.92307692307691" y="861.61137440758284"/>
         </scene>
-        <!--Info Saya-->
+        <!--Edit Info Saya-->
         <scene sceneID="QZq-5k-J0d">
             <objects>
-                <viewController id="BXq-Ja-Ycg" customClass="InfoSayaVC" customModule="AkuBisa" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BXq-Ja-Ycg" userLabel="Edit Info Saya" customClass="EditInfoSayaVC" customModule="AkuBisa" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Su4-hb-Kdo">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="1050"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -579,6 +576,14 @@
                                                                 <state key="normal" title="Save">
                                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 </state>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                        <integer key="value" value="20"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                                <connections>
+                                                                    <segue destination="hEg-kI-Ao9" kind="unwind" unwindAction="unwind:" id="CHR-9l-c3G"/>
+                                                                </connections>
                                                             </button>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Angela Wijaya" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RUU-rP-uRX">
                                                                 <rect key="frame" x="170" y="103" width="185" height="27"/>
@@ -735,6 +740,11 @@
                                                                 <state key="normal" title="Tambah">
                                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 </state>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                        <integer key="value" value="20"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
                                                             </button>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Kontak" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1FH-Zf-yEe">
                                                                 <rect key="frame" x="20" y="673" width="292" height="27"/>
@@ -784,6 +794,90 @@
                                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 </state>
                                                             </button>
+                                                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Nama anak" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zC0-QK-o29">
+                                                                <rect key="frame" x="170" y="103" width="185" height="34"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                <color key="textColor" systemColor="systemGray4Color"/>
+                                                                <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="16"/>
+                                                                <textInputTraits key="textInputTraits"/>
+                                                            </textField>
+                                                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Umur anak" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="chR-kx-Qeu">
+                                                                <rect key="frame" x="170" y="153" width="185" height="34"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                <color key="textColor" systemColor="systemGray4Color"/>
+                                                                <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="18"/>
+                                                                <textInputTraits key="textInputTraits"/>
+                                                            </textField>
+                                                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Alamat" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HIS-1E-tkA">
+                                                                <rect key="frame" x="170" y="203" width="185" height="34"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                <color key="textColor" systemColor="systemGray4Color"/>
+                                                                <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="16"/>
+                                                                <textInputTraits key="textInputTraits"/>
+                                                            </textField>
+                                                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Nama Kereta" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gh3-ZO-YdN">
+                                                                <rect key="frame" x="32" y="291" width="323" height="34"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                <color key="textColor" systemColor="systemGray4Color"/>
+                                                                <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="22"/>
+                                                                <textInputTraits key="textInputTraits"/>
+                                                            </textField>
+                                                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Kelas dan Kode Booking" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wiA-3V-ZcW">
+                                                                <rect key="frame" x="32" y="325" width="323" height="34"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                <color key="textColor" systemColor="systemGray4Color"/>
+                                                                <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="18"/>
+                                                                <textInputTraits key="textInputTraits"/>
+                                                            </textField>
+                                                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Catatan:" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9qV-c0-Rco">
+                                                                <rect key="frame" x="32" y="608" width="323" height="34"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                <color key="textColor" systemColor="systemGray4Color"/>
+                                                                <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="18"/>
+                                                                <textInputTraits key="textInputTraits"/>
+                                                            </textField>
+                                                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PVl-oj-Enf">
+                                                                <rect key="frame" x="211" y="399" width="143" height="34"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                <color key="textColor" systemColor="systemGray4Color"/>
+                                                                <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="22"/>
+                                                                <textInputTraits key="textInputTraits"/>
+                                                            </textField>
+                                                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aVZ-ST-JVy">
+                                                                <rect key="frame" x="212" y="488" width="143" height="34"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                <color key="textColor" systemColor="systemGray4Color"/>
+                                                                <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="22"/>
+                                                                <textInputTraits key="textInputTraits"/>
+                                                            </textField>
+                                                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9qY-Yu-rTo">
+                                                                <rect key="frame" x="211" y="550" width="143" height="34"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                <color key="textColor" systemColor="systemGray4Color"/>
+                                                                <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="22"/>
+                                                                <textInputTraits key="textInputTraits"/>
+                                                            </textField>
+                                                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tre-7l-WVC">
+                                                                <rect key="frame" x="32" y="399" width="143" height="34"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                <color key="textColor" systemColor="systemGray4Color"/>
+                                                                <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="22"/>
+                                                                <textInputTraits key="textInputTraits"/>
+                                                            </textField>
+                                                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LuH-J8-UpV">
+                                                                <rect key="frame" x="33" y="488" width="143" height="34"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                <color key="textColor" systemColor="systemGray4Color"/>
+                                                                <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="22"/>
+                                                                <textInputTraits key="textInputTraits"/>
+                                                            </textField>
+                                                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KPR-4q-7Y3">
+                                                                <rect key="frame" x="32" y="550" width="143" height="34"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                <color key="textColor" systemColor="systemGray4Color"/>
+                                                                <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="22"/>
+                                                                <textInputTraits key="textInputTraits"/>
+                                                            </textField>
                                                         </subviews>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                     </view>
@@ -823,10 +917,25 @@
                     <tabBarItem key="tabBarItem" title="Info Saya" image="person" catalog="system" id="fN5-hb-xko" customClass="info"/>
                     <navigationItem key="navigationItem" id="cGB-2o-T9b"/>
                     <size key="freeformSize" width="390" height="1050"/>
+                    <connections>
+                        <outlet property="alamatAnakTextField" destination="HIS-1E-tkA" id="SO8-94-5sk"/>
+                        <outlet property="catatanOrtuTextField" destination="9qV-c0-Rco" id="ssV-yR-e9j"/>
+                        <outlet property="dariStasiunTextField" destination="tre-7l-WVC" id="G21-kk-AkT"/>
+                        <outlet property="jalurKeretaTextField" destination="LuH-J8-UpV" id="xqx-kX-5tm"/>
+                        <outlet property="jamBerangkatTextField" destination="KPR-4q-7Y3" id="Be6-fV-I2D"/>
+                        <outlet property="jamTibaTextField" destination="9qY-Yu-rTo" id="WPe-rO-HCa"/>
+                        <outlet property="keStasiunTextField" destination="PVl-oj-Enf" id="TUs-cL-CbY"/>
+                        <outlet property="kodeBookingTextField" destination="wiA-3V-ZcW" id="eok-Xe-A9F"/>
+                        <outlet property="namaAnakTextField" destination="zC0-QK-o29" id="PDR-5a-lMT"/>
+                        <outlet property="namaKeretaTextField" destination="gh3-ZO-YdN" id="35l-OI-4XI"/>
+                        <outlet property="tempatDudukTextField" destination="aVZ-ST-JVy" id="q9I-BC-9r8"/>
+                        <outlet property="umurAnakTextField" destination="chR-kx-Qeu" id="Mvy-r2-oRj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Amr-vF-MT0" sceneMemberID="firstResponder"/>
+                <exit id="hEg-kI-Ao9" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1575" y="872"/>
+            <point key="canvasLocation" x="1573.8461538461538" y="871.56398104265395"/>
         </scene>
     </scenes>
     <resources>
@@ -843,6 +952,9 @@
         <image name="phone.fill" catalog="system" width="128" height="114"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray4Color">
+            <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
