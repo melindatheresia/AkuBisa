@@ -19,11 +19,14 @@ class LokasiVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
      
-        let judul = "Aku Bisa"
-        let boldAttribute = [NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 36)]
-        let judulBold = NSMutableAttributedString(string:judul, attributes:boldAttribute)
-        // TODO: Font ke SF-Pro-Display Black
-        judulAkuBisa.attributedText = judulBold
+//        let judul = "Aku Bisa"
+//        let boldAttribute = [NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 36)]
+//        let judulBold = NSMutableAttributedString(string:judul, attributes:boldAttribute)
+//        // TODO: Font ke SF-Pro-Display Black
+//        judulAkuBisa.attributedText = judulBold
+        
+//      https://developer.apple.com/documentation/uikit/text_display_and_fonts/adding_a_custom_font_to_your_app
+        judulAkuBisa.font = UIFont(name: "SF Pro Display Bold", size: 36.0)
     
         locationManager.requestWhenInUseAuthorization()
         

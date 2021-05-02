@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import ContactsUI
 
 class InfoSayaVC: UIViewController {
 
@@ -37,7 +36,7 @@ class InfoSayaVC: UIViewController {
     var jamTiba: String = "17:44"
     @IBOutlet weak var jamTibaLabel: UILabel!
         
-    var catatanOrtu: String = ""
+    var catatanOrtu: String = "Tolong jaga anak saya dengan baik ya. Hati-hati di jalan! Terima kasih!"
     @IBOutlet weak var catatanOrtuLabel: UILabel!
         
     @IBOutlet weak var kontakLabel: UILabel!
@@ -47,7 +46,27 @@ class InfoSayaVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        namaAnakLabel.font = UIFont(name: "SF Pro Display Bold", size: 22.0)
+        umurAnakLabel.font = UIFont(name: "SF Pro Display Bold", size: 22.0)
+        alamatAnakLabel.font = UIFont(name: "SF Pro Display Bold", size: 16.0)
+        
+        namaKeretaLabel.font = UIFont(name: "SF Pro Display Black", size: 22.0)
+        kodeBookingLabel.font = UIFont(name: "SF Pro Display Regular", size: 18.0)
+        
+        dariStasiunLabel.font = UIFont(name: "SF Pro Display Bold", size: 22.0)
+        keStasiunLabel.font = UIFont(name: "SF Pro Display Bold", size: 22.0)
+        jalurKeretaLabel.font = UIFont(name: "SF Pro Display Bold", size: 22.0)
+        tempatDudukLabel.font = UIFont(name: "SF Pro Display Bold", size: 22.0)
+        jamBerangkatLabel.font = UIFont(name: "SF Pro Display Bold", size: 22.0)
+        jamTibaLabel.font = UIFont(name: "SF Pro Display Bold", size: 22.0)
+        
+        
+        catatanOrtuLabel.font = UIFont(name: "SF Pro Display Regular", size: 16.0)
+        
+        kontakLabel.font = UIFont(name: "SF Pro Display Black", size: 22.0)
+        
         copyVarKeLabel()
+        
     }
     
     func copyVarKeLabel() {
@@ -115,19 +134,4 @@ class InfoSayaVC: UIViewController {
 
     @IBAction func unwind( _ seg: UIStoryboardSegue) {
     }
-    
-    
-    // 1
-    let friend = friendsList[indexPath.row]
-    let contact = friend.contactValue
-    // 2
-    let contactViewController = CNContactViewController(forUnknownContact: contact)
-    contactViewController.hidesBottomBarWhenPushed = true
-    contactViewController.allowsEditing = false
-    contactViewController.allowsActions = false
-    // 3
-    navigationController?.navigationBar.tintColor = .appBlue
-    navigationController?.pushViewController(contactViewController, animated: true)
-
-    
 }
