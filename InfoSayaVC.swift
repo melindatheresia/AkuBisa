@@ -6,9 +6,10 @@
 //
 
 import UIKit
-import ContactsUI
 
-class InfoSayaVC: UIViewController, CNContactViewControllerDelegate {
+class InfoSayaVC: UIViewController{
+    
+    static let kontakDaruratNotification = Notification.Name("KontakDaruratBerubah")
 
     @IBOutlet weak var ubahInfo: UIButton!
     
@@ -42,7 +43,7 @@ class InfoSayaVC: UIViewController, CNContactViewControllerDelegate {
     
     @IBOutlet weak var kontakLabel: UILabel!
     var namaKontakDarurat: String = "Mom"
-    var nomorKontakDarurat: String = "089619458979"
+    var nomorKontakDarurat: String = "+6289619458979"
     @IBOutlet weak var namaKontakLabel: UILabel!
     
     
@@ -78,36 +79,9 @@ class InfoSayaVC: UIViewController, CNContactViewControllerDelegate {
         fitAllLabels()
     }
     
-//    @IBDesignable class PaddingLabel: UILabel {
-//
-//        @IBInspectable var topInset: CGFloat = 5.0
-//        @IBInspectable var bottomInset: CGFloat = 5.0
-//        @IBInspectable var leftInset: CGFloat = 7.0
-//        @IBInspectable var rightInset: CGFloat = 7.0
-//
-//        override func drawText(in rect: CGRect) {
-//            let insets = UIEdgeInsets(top: topInset, left: leftInset, bottom: bottomInset, right: rightInset)
-//            super.drawText(in: rect.inset(by: insets))
-//        }
-//
-//        override var intrinsicContentSize: CGSize {
-//            let size = super.intrinsicContentSize
-//            return CGSize(width: size.width + leftInset + rightInset,
-//                          height: size.height + topInset + bottomInset)
-//        }
-//
-//        override var bounds: CGRect {
-//            didSet {
-//                // ensures this works within stack views if multi-line
-//                preferredMaxLayoutWidth = bounds.width - (leftInset + rightInset)
-//            }
-//        }
-//    }
-    
     func fitAllLabels() {
         catatanOrtuLabel.textAlignment = .left
         catatanOrtuLabel.sizeToFit()
-        catatanOrtuLabel.frame = CGRect(x: catatanOrtuLabel.frame.origin.x + 5, y: catatanOrtuLabel.frame.origin.y - 20, width:  catatanOrtuLabel.frame.width, height: catatanOrtuLabel.frame.height)
         
         alamatAnakLabel.sizeToFit()
         dariStasiunLabel.sizeToFit()
@@ -183,6 +157,9 @@ class InfoSayaVC: UIViewController, CNContactViewControllerDelegate {
         catatanOrtu = catatanOrtuBaru
         namaKontakDarurat = namaKontakDaruratBaru
         nomorKontakDarurat = nomorKontakDaruratBaru
+        
+        let dictionary = ["nomorKontakDaruratBaru":nomorKontakDaruratBaru]
+        NotificationCenter.default.post(name: InfoSayaVC.kontakDaruratNotification, object: nil, userInfo: dictionary)
         
         copyVarKeLabel()
     }

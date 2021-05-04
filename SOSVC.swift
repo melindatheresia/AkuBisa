@@ -20,15 +20,15 @@ class SOSVC: UIViewController {
         
 //      Shadow Color and Radius
         polisiButton.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.10).cgColor
-        polisiButton.layer.shadowOffset = CGSize(width: 5.0, height: 5.0)
-        polisiButton.layer.shadowOpacity = 1.0
+        polisiButton.layer.shadowOffset = CGSize(width: 8.0, height: 8.0)
+        polisiButton.layer.shadowOpacity = 0.8
         polisiButton.layer.shadowRadius = 5.0
         polisiButton.layer.masksToBounds = false
         
 //      Shadow Color and Radius
         ambulansButton.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.10).cgColor
-        ambulansButton.layer.shadowOffset = CGSize(width: 5.0, height: 5.0)
-        ambulansButton.layer.shadowOpacity = 1.0
+        ambulansButton.layer.shadowOffset = CGSize(width: 8.0, height: 8.0)
+        ambulansButton.layer.shadowOpacity = 0.8
         ambulansButton.layer.shadowRadius = 5.0
         ambulansButton.layer.masksToBounds = false
     }
