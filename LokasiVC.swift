@@ -27,13 +27,22 @@ class LokasiVC: UIViewController {
         
 //      https://developer.apple.com/documentation/uikit/text_display_and_fonts/adding_a_custom_font_to_your_app
         judulAkuBisa.font = UIFont(name: "SF Pro Display Bold", size: 36.0)
+      
+//      https://stackoverflow.com/questions/27076419/uibutton-bottom-shadow
+//      Shadow Color and Radius
+        kirimLokasi.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.10).cgColor
+        kirimLokasi.layer.shadowOffset = CGSize(width: 5.0, height: 5.0)
+        kirimLokasi.layer.shadowOpacity = 1.0
+        kirimLokasi.layer.shadowRadius = 5.0
+        kirimLokasi.layer.masksToBounds = false
     
         locationManager.requestWhenInUseAuthorization()
         
     }
 
+    
     @IBAction func kirimLokasiBtn(_ sender: Any) {
-        let phoneNumber =  "+6289619458979" // you need to change this number
+        var phoneNumber =  "+6289619458979" // you need to change this number
         
     
 //      https://www.tutorialspoint.com/how-to-get-the-current-location-latitude-and-longitude-in-ios ini buat ambil location longitude and latitude, permission to location
@@ -56,8 +65,7 @@ class LokasiVC: UIViewController {
         if UIApplication.shared.canOpenURL(appURL) {
             if #available(iOS 10.0, *) {
                 UIApplication.shared.open(appURL, options: [:], completionHandler: nil)
-            }
-            else {
+            } else {
                 UIApplication.shared.openURL(appURL)
             }
         } else {

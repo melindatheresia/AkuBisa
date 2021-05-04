@@ -8,10 +8,12 @@
 import UIKit
 
 
-class EditInfoSayaVC: UIViewController {
+class EditInfoSayaVC: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     var infoSayaVC: InfoSayaVC?
 
+    var gantiFoto = UIImagePickerController()
+    @IBOutlet weak var profilePicture: UIImageView!
     @IBOutlet weak var saveInfo: UIButton!
     
     var namaAnak: String = ""
@@ -42,17 +44,30 @@ class EditInfoSayaVC: UIViewController {
     var catatanOrtu: String = ""
     @IBOutlet weak var catatanOrtuTextField: UITextField!
     
+    var namaKontakDarurat: String = ""
+    @IBOutlet weak var namaKontakTextField: UITextField!
+    var nomorKontakDarurat: String = ""
+    @IBOutlet weak var nomorKontakTextField: UITextField!
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        // button shadow
+        saveInfo.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.10).cgColor
+        saveInfo.layer.shadowOffset = CGSize(width: 5.0, height: 5.0)
+        saveInfo.layer.shadowOpacity = 1.0
+        saveInfo.layer.shadowRadius = 5.0
+        saveInfo.layer.masksToBounds = false
+        
         setDefaultPlaceholder()
         copyVarKeTextFieldPlaceholder()
     }
     
-    
+//    https://learnappmaking.com/pass-data-between-view-controllers-swift-how-to/#back-properties kirim info dari textfield ke InfoSayaVC
     @IBAction func saveInfoBtn(_ sender: Any) {
-        infoSayaVC?.onSaveInfoBtn(
+        infoSayaVC?.onSaveInfoBtn (
             namaAnakBaru: namaAnakTextField.text!,
             umurAnakBaru: umurAnakTextField.text!,
             alamatAnakBaru: alamatAnakTextField.text!,
@@ -64,7 +79,9 @@ class EditInfoSayaVC: UIViewController {
             tempatDudukBaru: tempatDudukTextField.text!,
             jamBerangkatBaru: jamBerangkatTextField.text!,
             jamTibaBaru: jamTibaTextField.text!,
-            catatanOrtuBaru: catatanOrtuTextField.text!)
+            catatanOrtuBaru: catatanOrtuTextField.text!,
+            namaKontakDaruratBaru: namaKontakTextField.text!,
+            nomorKontakDaruratBaru: nomorKontakTextField.text!)
     }
     
     func setDefaultPlaceholder() {
@@ -83,6 +100,9 @@ class EditInfoSayaVC: UIViewController {
         jamTibaTextField.placeholder = "Jam Tiba"
         
         catatanOrtuTextField.placeholder = "Catatan dari Ortu"
+        
+        namaKontakTextField.placeholder = "Nama Kontak Darurat"
+        nomorKontakTextField.placeholder = "Nomor Kontak Darurat"
     }
     
     func copyVarKeTextFieldPlaceholder() {
@@ -101,8 +121,39 @@ class EditInfoSayaVC: UIViewController {
         jamTibaTextField.text = jamTiba
         
         catatanOrtuTextField.text = catatanOrtu
+        
+        namaKontakTextField.text = namaKontakDarurat
+        nomorKontakTextField.text = nomorKontakDarurat
     }
     
-   
+    @IBAction func gantiProfilePictureBtn(_ sender: AnyObject) {
+        
+        }
+    
 
+}
+
+extension LokasiVC: UIImagePickerControllerDelegate {
+    
+    func presentPhotoActionSheet() {
+        let actionSheet = UIAlertController(title: "Ganti Foto", message: "Ganti foto anak", preferredStyle: .actionSheet)
+        actionSheet.addAction(UIAlertAction(title: "Ambil Foto", style: .default, handler: { _ in
+            
+        }))
+        actionSheet.addAction(UIAlertAction(title: "Pilih dari album", style: .default, handler: { _ in
+            
+        }))
+        actionSheet.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        
+        present(actionSheet, animated: true)
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        
+    }
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        
+    }
+    
 }

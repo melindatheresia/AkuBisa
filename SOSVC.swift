@@ -17,6 +17,20 @@ class SOSVC: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+//      Shadow Color and Radius
+        polisiButton.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.10).cgColor
+        polisiButton.layer.shadowOffset = CGSize(width: 5.0, height: 5.0)
+        polisiButton.layer.shadowOpacity = 1.0
+        polisiButton.layer.shadowRadius = 5.0
+        polisiButton.layer.masksToBounds = false
+        
+//      Shadow Color and Radius
+        ambulansButton.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.10).cgColor
+        ambulansButton.layer.shadowOffset = CGSize(width: 5.0, height: 5.0)
+        ambulansButton.layer.shadowOpacity = 1.0
+        ambulansButton.layer.shadowRadius = 5.0
+        ambulansButton.layer.masksToBounds = false
     }
     
 
@@ -36,19 +50,18 @@ class SOSVC: UIViewController {
 ////   https://www.zerotoappstore.com/how-to-make-a-phone-call-button-in-swift.html
 //        guard let number = URL(string: "tel://" + "+6289619458979") else { return }
 //        UIApplication.shared.open(number)
-//
-        
+
 //   https://stackoverflow.com/questions/40078370/how-to-make-phone-call-in-ios-10-using-swift/48870081
         let nomorPolisi = "110"
-        guard let url = URL(string: "tel://\(nomorPolisi)") else {
-        return //be safe
-        }
+            guard let url = URL(string: "tel://\(nomorPolisi)") else {
+                return //be safe
+            }
 
-        if #available(iOS 10.0, *) {
-        UIApplication.shared.open(url)
-        } else {
-        UIApplication.shared.openURL(url)
-        }
+            if #available(iOS 10.0, *) {
+                UIApplication.shared.open(url)
+            } else {
+                UIApplication.shared.openURL(url)
+            }
         
         // pengen nyobain ganti text di pop up "Call 110 -> "telpon polisi"
         
@@ -57,15 +70,15 @@ class SOSVC: UIViewController {
     @IBAction func telpAmbulansBtn(_ sender: Any) {
         
         let nomorPolisi = "118"
-        guard let url = URL(string: "tel://\(nomorPolisi)") else {
-        return //be safe
-        }
+            guard let url = URL(string: "tel://\(nomorPolisi)") else {
+                return //be safe
+            }
 
-        if #available(iOS 10.0, *) {
-        UIApplication.shared.open(url)
-        } else {
-        UIApplication.shared.openURL(url)
-        }
+            if #available(iOS 10.0, *) {
+                UIApplication.shared.open(url)
+            } else {
+                UIApplication.shared.openURL(url)
+            }
         
     }
     
