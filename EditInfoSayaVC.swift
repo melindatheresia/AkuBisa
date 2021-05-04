@@ -61,6 +61,7 @@ class EditInfoSayaVC: UIViewController, UIImagePickerControllerDelegate, UINavig
         saveInfo.layer.shadowRadius = 5.0
         saveInfo.layer.masksToBounds = false
         
+        
         setDefaultPlaceholder()
         copyVarKeTextFieldPlaceholder()
     }
@@ -137,15 +138,31 @@ extension LokasiVC: UIImagePickerControllerDelegate {
     
     func presentPhotoActionSheet() {
         let actionSheet = UIAlertController(title: "Ganti Foto", message: "Ganti foto anak", preferredStyle: .actionSheet)
-        actionSheet.addAction(UIAlertAction(title: "Ambil Foto", style: .default, handler: { _ in
-            
+        
+        actionSheet.addAction(UIAlertAction(title: "Ambil Foto", style: .default, handler: { [weak self] _ in
+            self?.presentCamera()
         }))
-        actionSheet.addAction(UIAlertAction(title: "Pilih dari album", style: .default, handler: { _ in
-            
+        
+        actionSheet.addAction(UIAlertAction(title: "Pilih dari album", style: .default, handler: { [weak self] _ in
+            self?.presentPhotoPicker()
         }))
+        
         actionSheet.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
         
         present(actionSheet, animated: true)
+    }
+    
+    func presentCamera() {
+        let vc = UIImagePickerController
+        vc.SourceType = .camera
+        vc.delete(self)
+        vc.allowsEditing = true
+        present(vc, animated: true)
+        
+    }
+    
+    func presentPhotoPicker() {
+        
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
