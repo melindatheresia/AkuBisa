@@ -12,7 +12,7 @@ class InfoSayaVC: UIViewController{
     static let kontakDaruratNotification = Notification.Name("KontakDaruratBerubah")
 
     @IBOutlet weak var ubahInfo: UIButton!
-    var gantiFoto = UIImageView()
+    var gantiFoto: UIImage = #imageLiteral(resourceName: "NC 1 profile-6")
     @IBOutlet weak var profilePicture: UIImageView!
     
     var namaAnak: String = "Melinda Theresia"
@@ -77,6 +77,10 @@ class InfoSayaVC: UIViewController{
         ubahInfo.layer.shadowRadius = 5.0
         ubahInfo.layer.masksToBounds = false
         
+        profilePicture.layer.masksToBounds = true
+        profilePicture.contentMode = .scaleAspectFill
+        profilePicture.layer.cornerRadius = 15
+        
         copyVarKeLabel()
         fitAllLabels()
     }
@@ -107,7 +111,8 @@ class InfoSayaVC: UIViewController{
         
         catatanOrtuLabel.text = catatanOrtu
         namaKontakLabel.text = namaKontakDarurat
-        profilePicture = gantiFoto
+
+        profilePicture.image = gantiFoto
         
     }
     
@@ -138,11 +143,11 @@ class InfoSayaVC: UIViewController{
             
             editInfoSayaVC?.namaKontakDarurat = namaKontakDarurat
             editInfoSayaVC?.nomorKontakDarurat = nomorKontakDarurat
-            editInfoSayaVC?.profilePicture = profilePicture
+            editInfoSayaVC?.fotoDariInfoSaya = gantiFoto
         }
     }
     
-    func onSaveInfoBtn(namaAnakBaru: String, umurAnakBaru: String, alamatAnakBaru: String, namaKeretaBaru: String, kodeBookingBaru: String, dariStasiunBaru: String, keStasiunBaru: String, jalurKeretaBaru: String, tempatDudukBaru: String, jamBerangkatBaru: String, jamTibaBaru: String, catatanOrtuBaru: String, namaKontakDaruratBaru: String, nomorKontakDaruratBaru: String, gantiFotoBaru: UIImageView) {
+    func onSaveInfoBtn(namaAnakBaru: String, umurAnakBaru: String, alamatAnakBaru: String, namaKeretaBaru: String, kodeBookingBaru: String, dariStasiunBaru: String, keStasiunBaru: String, jalurKeretaBaru: String, tempatDudukBaru: String, jamBerangkatBaru: String, jamTibaBaru: String, catatanOrtuBaru: String, namaKontakDaruratBaru: String, nomorKontakDaruratBaru: String, gantiFotoBaru: UIImage) {
         namaAnak = namaAnakBaru
         umurAnak = umurAnakBaru
         alamatAnak = alamatAnakBaru
@@ -161,7 +166,7 @@ class InfoSayaVC: UIViewController{
         namaKontakDarurat = namaKontakDaruratBaru
         nomorKontakDarurat = nomorKontakDaruratBaru
         
-        profilePicture = gantiFotoBaru
+        gantiFoto = gantiFotoBaru
         
         let dictionary = ["nomorKontakDaruratBaru":nomorKontakDaruratBaru]
         NotificationCenter.default.post(name: InfoSayaVC.kontakDaruratNotification, object: nil, userInfo: dictionary)

@@ -7,11 +7,12 @@
 
 import UIKit
 import CoreLocation
-import MapKit
 
 class LokasiVC: UIViewController, CLLocationManagerDelegate {
 
-     let locationManager = CLLocationManager()
+     var locationManager = CLLocationManager()
+     var latitude: CLLocationDegrees?
+     var longitude: CLLocationDegrees?
      var phoneNumber = "+6289619458979"
      
     @IBOutlet weak var judulAkuBisa: UILabel!
@@ -45,42 +46,58 @@ class LokasiVC: UIViewController, CLLocationManagerDelegate {
      }
     }
      
+     override func viewDidAppear(_ animated: Bool) {
+          locationManager.startUpdatingLocation()
+     }
+     
      @objc func kalauKontakDaruratBerubah(notification: Notification) {
           if (notification.userInfo!["nomorKontakDaruratBaru"] != nil) {
                phoneNumber = "\(notification.userInfo!["nomorKontakDaruratBaru"]!)" // notifikasi yang diterima adalah nomor kontak darurat yang baru bila ada edit
           }
      }
 
+     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+          guard let location: CLLocationCoordinate2D = manager.location?.coordinate else {return}
+//          locationManager = location
+          latitude = location.latitude
+          longitude = location.longitude
+     }
     
     @IBAction func kirimLokasiBtn(_ sender: Any) {
 //      https://www.tutorialspoint.com/how-to-get-the-current-location-latitude-and-longitude-in-ios ini buat ambil location longitude and latitude, permission to location
      let authorizationStatus = locationManager.authorizationStatus
         
      if (authorizationStatus != .restricted && authorizationStatus != .denied) {
-          guard let currentLocation = locationManager.location else { return }
+          //          guard let currentLocation = locationManager.location else { return }
           
-          let longitude = currentLocation.coordinate.longitude
-          let latitude = currentLocation.coordinate.latitude
-          let locationUrl = "https://maps.google.com/?daddr=\(longitude),\(latitude)"
-        
-       //      https://docs.mtarget.co/en/guide/guide-linkwhatsapp/ ini buat link wa di bawah
-       //      https://wa.me/08231231412?text=Halo%20name%20maya%20nadine
-            
-       //      https://stackoverflow.com/questions/39809620/how-to-open-whatsapp-from-swift-app ini buat open whatsapp
+          if let lat = latitude, let long = longitude {
+               
+               let longitude = long
+               let latitude = lat
+               let locationUrl = "https://maps.google.com/?q=@\(latitude),\(longitude)"
+//               https://maps.google.com/?q=@-6.3012645,106.65437
+//               "https://maps.google.com/?daddr=\(longitude),\(latitude)"
+               
+               //      https://docs.mtarget.co/en/guide/guide-linkwhatsapp/ ini buat link wa di bawah
+               //      https://wa.me/08231231412?text=Halo%20name%20maya%20nadine
+               
+               //      https://stackoverflow.com/questions/39809620/how-to-open-whatsapp-from-swift-app ini buat open whatsapp
                let appURL = URL(string: "https://wa.me/\(phoneNumber)?text=Hi,%20now%20I'm%20here%20!%20\(locationUrl)")!
                if UIApplication.shared.canOpenURL(appURL) {
-                   if #available(iOS 10.0, *) {
-                       UIApplication.shared.open(appURL, options: [:], completionHandler: nil)
-                   } else {
-                       UIApplication.shared.openURL(appURL)
-                   }
+                    if #available(iOS 10.0, *) {
+                         UIApplication.shared.open(appURL, options: [:], completionHandler: nil)
+                    } else {
+                         UIApplication.shared.openURL(appURL)
+                    }
                } else {
-                   // WhatsApp is not installed
+                    // WhatsApp is not installed
                }
-        } else {
-          // Location is not enabled/authorized
-        }
+          } else {
+               // Location is not enabled/authorized
+          }
+     }
      
-        
+     locationManager.stopUpdatingLocation()
+     
     }
 }
