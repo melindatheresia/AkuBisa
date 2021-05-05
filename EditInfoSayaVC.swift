@@ -8,7 +8,7 @@
 import UIKit
 
 
-class EditInfoSayaVC: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class EditInfoSayaVC: UIViewController {
     
     var infoSayaVC: InfoSayaVC?
 
@@ -64,6 +64,8 @@ class EditInfoSayaVC: UIViewController, UIImagePickerControllerDelegate, UINavig
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name:UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name:UIResponder.keyboardWillHideNotification, object: nil)
         
+        gantiFoto.delegate = self
+        
         setDefaultPlaceholder()
         copyVarKeTextFieldPlaceholder()
     }
@@ -84,25 +86,10 @@ class EditInfoSayaVC: UIViewController, UIImagePickerControllerDelegate, UINavig
             jamTibaBaru: jamTibaTextField.text!,
             catatanOrtuBaru: catatanOrtuTextField.text!,
             namaKontakDaruratBaru: namaKontakTextField.text!,
-            nomorKontakDaruratBaru: nomorKontakTextField.text!)
+            nomorKontakDaruratBaru: nomorKontakTextField.text!,
+            gantiFotoBaru: profilePicture)
     }
     
-    @objc func keyboardWillShow (notification:NSNotification) {
-
-        guard let userInfo = notification.userInfo else { return }
-        var keyboardFrame:CGRect = (userInfo[UIResponder.keyboardFrameBeginUserInfoKey] as! NSValue).cgRectValue
-        keyboardFrame = self.view.convert(keyboardFrame, from: nil)
-
-        var contentInset:UIEdgeInsets = self.scrollView.contentInset
-        contentInset.bottom = keyboardFrame.size.height + 20
-        scrollView.contentInset = contentInset
-    }
-
-    @objc func keyboardWillHide (notification:NSNotification) {
-
-        let contentInset:UIEdgeInsets = UIEdgeInsets.zero
-        scrollView.contentInset = contentInset
-    }
     
     @IBOutlet weak var scrollView: UIScrollView!
     func setDefaultPlaceholder() {
@@ -148,50 +135,37 @@ class EditInfoSayaVC: UIViewController, UIImagePickerControllerDelegate, UINavig
         nomorKontakTextField.text = nomorKontakDarurat
     }
     
-    @IBAction func gantiProfilePictureBtn(_ sender: AnyObject) {
-        
-        }
-    
+    @objc func keyboardWillShow (notification:NSNotification) {
 
+        guard let userInfo = notification.userInfo else { return }
+        var keyboardFrame:CGRect = (userInfo[UIResponder.keyboardFrameBeginUserInfoKey] as! NSValue).cgRectValue
+        keyboardFrame = self.view.convert(keyboardFrame, from: nil)
+
+        var contentInset:UIEdgeInsets = self.scrollView.contentInset
+        contentInset.bottom = keyboardFrame.size.height + 20
+        scrollView.contentInset = contentInset
+    }
+
+    @objc func keyboardWillHide (notification:NSNotification) {
+
+        let contentInset:UIEdgeInsets = UIEdgeInsets.zero
+        scrollView.contentInset = contentInset
+    }
+    
+    @IBAction func gantiProfilePictureBtn(_ sender: AnyObject) {
+            
+        //https://www.youtube.com/watch?v=0EF2QsUOj90
+        gantiFoto.sourceType = .photoLibrary
+        gantiFoto.allowsEditing = true
+        present(gantiFoto, animated: true, completion: nil)
+    }
 }
 
-//extension LokasiVC: UIImagePickerControllerDelegate {
-//
-//    func presentPhotoActionSheet() {
-//        let actionSheet = UIAlertController(title: "Ganti Foto", message: "Ganti foto anak", preferredStyle: .actionSheet)
-//
-//        actionSheet.addAction(UIAlertAction(title: "Ambil Foto", style: .default, handler: { [weak self] _ in
-//            self?.presentCamera()
-//        }))
-//        
-//        actionSheet.addAction(UIAlertAction(title: "Pilih dari album", style: .default, handler: { [weak self] _ in
-//            self?.presentPhotoPicker()
-//        }))
-//
-//        actionSheet.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
-//
-//        present(actionSheet, animated: true)
-//    }
-//
-//    func presentCamera() {
-//        let vc = UIImagePickerController
-//        vc.SourceType = .camera
-//        vc.delete(self)
-//        vc.allowsEditing = true
-//        present(vc, animated: true)
-//
-//    }
-//
-//    func presentPhotoPicker() {
-//
-//    }
-//
-//    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-//
-//    }
-//
-//    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
-//
-//    }
-//
-//}
+extension EditInfoSayaVC: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
+            profilePicture.image = image
+        }
+        dismiss(animated: true, completion: nil)
+    }
+}

@@ -473,6 +473,7 @@
                         <outlet property="namaAnakLabel" destination="qUK-1C-Eov" id="AzG-Va-n24"/>
                         <outlet property="namaKeretaLabel" destination="zgG-k3-JqZ" id="3Oj-q8-BnV"/>
                         <outlet property="namaKontakLabel" destination="Pxn-Yp-RJ8" id="lgh-fe-WCc"/>
+                        <outlet property="profilePicture" destination="tm1-GW-iCF" id="SW5-bO-c8Z"/>
                         <outlet property="tempatDudukLabel" destination="Fio-Rq-tUO" id="2Yz-pG-osM"/>
                         <outlet property="ubahInfo" destination="pJ6-cN-f05" id="O5D-Wa-wAv"/>
                         <outlet property="umurAnakLabel" destination="eYB-MN-kzM" id="0Np-Ma-gRV"/>
@@ -694,10 +695,19 @@
                                                                 <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="18"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                             </textField>
-                                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ucs-8z-Vd3">
-                                                                <rect key="frame" x="20" y="81" width="142" height="188"/>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Yp-So-BSE">
+                                                                <rect key="frame" x="30" y="91" width="0.0" height="0.0"/>
                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                                <state key="normal">
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="right" contentVerticalAlignment="top" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ucs-8z-Vd3">
+                                                                <rect key="frame" x="20" y="84" width="134" height="188"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                                                <color key="tintColor" red="1" green="0.97647058819999999" blue="0.93333333330000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <state key="normal" image="square.and.pencil" catalog="system">
                                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 </state>
                                                                 <connections>
@@ -770,9 +780,7 @@
         </scene>
     </scenes>
     <designables>
-        <designable name="l5o-Tl-5Og">
-            <size key="intrinsicContentSize" width="20" height="20"/>
-        </designable>
+        <designable name="l5o-Tl-5Og"/>
     </designables>
     <resources>
         <image name="NC 1 home-3" width="1626" height="3517"/>
@@ -786,6 +794,7 @@
         <image name="person" catalog="system" width="128" height="117"/>
         <image name="phone" catalog="system" width="128" height="115"/>
         <image name="phone.fill" catalog="system" width="128" height="114"/>
+        <image name="square.and.pencil" catalog="system" width="128" height="115"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

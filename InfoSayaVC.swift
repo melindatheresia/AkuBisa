@@ -12,6 +12,8 @@ class InfoSayaVC: UIViewController{
     static let kontakDaruratNotification = Notification.Name("KontakDaruratBerubah")
 
     @IBOutlet weak var ubahInfo: UIButton!
+    var gantiFoto = UIImageView()
+    @IBOutlet weak var profilePicture: UIImageView!
     
     var namaAnak: String = "Melinda Theresia"
     @IBOutlet weak var namaAnakLabel: UILabel!
@@ -104,8 +106,8 @@ class InfoSayaVC: UIViewController{
         jamTibaLabel.text = jamTiba
         
         catatanOrtuLabel.text = catatanOrtu
-        
         namaKontakLabel.text = namaKontakDarurat
+        profilePicture = gantiFoto
         
     }
     
@@ -136,10 +138,11 @@ class InfoSayaVC: UIViewController{
             
             editInfoSayaVC?.namaKontakDarurat = namaKontakDarurat
             editInfoSayaVC?.nomorKontakDarurat = nomorKontakDarurat
+            editInfoSayaVC?.profilePicture = profilePicture
         }
     }
     
-    func onSaveInfoBtn(namaAnakBaru: String, umurAnakBaru: String, alamatAnakBaru: String, namaKeretaBaru: String, kodeBookingBaru: String, dariStasiunBaru: String, keStasiunBaru: String, jalurKeretaBaru: String, tempatDudukBaru: String, jamBerangkatBaru: String, jamTibaBaru: String, catatanOrtuBaru: String, namaKontakDaruratBaru: String, nomorKontakDaruratBaru: String) {
+    func onSaveInfoBtn(namaAnakBaru: String, umurAnakBaru: String, alamatAnakBaru: String, namaKeretaBaru: String, kodeBookingBaru: String, dariStasiunBaru: String, keStasiunBaru: String, jalurKeretaBaru: String, tempatDudukBaru: String, jamBerangkatBaru: String, jamTibaBaru: String, catatanOrtuBaru: String, namaKontakDaruratBaru: String, nomorKontakDaruratBaru: String, gantiFotoBaru: UIImageView) {
         namaAnak = namaAnakBaru
         umurAnak = umurAnakBaru
         alamatAnak = alamatAnakBaru
@@ -158,12 +161,16 @@ class InfoSayaVC: UIViewController{
         namaKontakDarurat = namaKontakDaruratBaru
         nomorKontakDarurat = nomorKontakDaruratBaru
         
+        profilePicture = gantiFotoBaru
+        
         let dictionary = ["nomorKontakDaruratBaru":nomorKontakDaruratBaru]
         NotificationCenter.default.post(name: InfoSayaVC.kontakDaruratNotification, object: nil, userInfo: dictionary)
         
         copyVarKeLabel()
     }
 
+    
+    
     // Kontak Darurat
     @IBAction func messageKontakBtn(_ sender: Any) {
         let messageDarurat = URL( string: "https://wa.me/\(nomorKontakDarurat)")!
